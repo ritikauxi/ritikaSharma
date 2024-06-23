@@ -1,0 +1,510 @@
+.heroSection {
+    /* aspect-ratio: 48/23; */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.headingContainer {
+    display: flex;
+    width: calc(100vw - 2 * var(--site-margin));
+    height: 85%;
+    gap: 20px;
+}
+
+.headignText
+ {
+    font-size: var(--fs-164);
+    font-weight: var(--head-fontWeight);
+    text-transform: var(--head-text-transform);
+    line-height: 1;
+    color: var(--green-white);
+    width: 100%;
+    /* width: max-content; */
+}
+.headignText .word{
+    display: flex !important;
+    overflow-y: hidden;
+}
+.heading2 .word{
+    justify-content: flex-end
+}
+
+
+.heading1 {
+    /* width: 100%; */
+    padding-top: 5%;
+}
+
+.heading2 {
+    /* width: 100%; */
+    align-self: flex-end;
+    text-align: right;
+    padding-bottom: 5%;
+}
+
+.heroImageContainer {
+    width: min-content;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--image-corner-radius);
+}
+
+.imgRow {
+    width: 100%;
+    /* height: 100%; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--image-corner-radius);
+}
+
+@media screen and (min-width: 320px) and (max-width: 960px) {
+    .headingContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .headerContainer {
+        height: 80px;
+    }
+
+    .sectionGap {
+        height: 60px;
+    }
+
+    .stickyEye {
+        bottom: 20px;
+        top: auto;
+    }
+
+    .stickyEyeButton {
+        width: 35vw;
+    }
+
+}
+
+
+
+
+/* basic About */
+
+.basicAbout,
+.basicAbout .word,
+.basicAbout .word .char {
+    font-family: var(--secondary-font);
+    font-size: var(--fs-64);
+    text-align: center;
+    font-weight: 400;
+    color: var(--prime-text-color);
+    transition: color .2s ease;
+}
+
+/* Work */
+.workSection {
+    align-items: flex-start;
+    display: block;
+}
+
+.headings {
+    font-size: var(--fs-164);
+    color: var(--prime-text-color);
+    margin-bottom: var(--fs-64);
+    position: relative;
+}
+
+.workContainer {
+    display: flex;
+    gap: var(--work-grid-gap);
+    flex-direction: column;
+}
+
+.workSectionRow {
+    display: flex;
+    flex-direction: row;
+    gap: var(--work-grid-gap);
+    width: 100%;
+    position: relative;
+    /* height: ; */
+}
+
+.workSectionCenter {
+    justify-content: center;
+}
+
+.squareWorkContainer {
+    /* aspect-ratio: 1/1; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--fs-36);
+}
+
+.landscapeWorkContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--fs-36);
+    width: 70%;
+}
+
+.workSquareImage {
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--image-corner-radius);
+}
+
+.workLandscapeImage {
+    aspect-ratio: 1.5/1;
+    /* width: 70%; */
+    object-fit: cover;
+    border-radius: var(--image-corner-radius);
+}
+
+.workRowUp {
+    margin-top: -30%;
+}
+
+.projectDescription {
+    font-size: var(--fs-64);
+    color: var(--green-pink);
+    font-family: var(--secondary-font);
+    width: 100%;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.lookHereImage {
+    width: 20%;
+    position: absolute;
+    left: 30%;
+    bottom: 10%;
+    animation: 4s imageElementRotate infinite;
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+    .workSectionRow {
+        flex-direction: column;
+    }
+
+    .squareWorkContainer,
+    .landscapeWorkContainer {
+        width: 100%;
+    }
+
+    .workRowUp {
+        margin: 0;
+    }
+
+    .workExtraElement {
+        display: none;
+    }
+
+    .lookHereImage {
+        display: none;
+    }
+}
+
+
+/* About me */
+.aboutMeSection {
+    align-items: flex-start;
+    position: relative;
+}
+
+.aboutMeContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--work-grid-gap);
+}
+
+.aboutMeContain1,
+.aboutMeContain2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutMeSubExplain {
+    font-family: var(--prime-font-change);
+    font-size: var(--fs-64);
+    font-weight: 400;
+    color: var(--prime-text-color);
+    position: relative;
+}
+
+.aboutMeContent,
+.aboutMeContent span {
+    font-family: var(--secondary-font);
+    font-size: var(--fs-24);
+    width: 80%;
+    align-self: flex-end;
+    margin-top: 16%;
+    color: var(--prime-text-color);
+}
+
+.aboutMeContain2>:last-child {
+    align-self: flex-start;
+}
+
+
+
+.aboutMeImage {
+    width: 100%;
+    aspect-ratio: 74/93;
+    border-radius: var(--image-corner-radius);
+}
+
+.meetMeElement {
+    position: absolute;
+    bottom: 0;
+    right: -30%;
+    width: 20%;
+}
+
+.Melting-Emoji {
+    position: absolute;
+    bottom: -20%;
+    right: 10%;
+    width: 20%;
+}
+
+.Mashroom {
+    position: absolute;
+    bottom: -20%;
+    right: 10%;
+    width: 10%;
+    animation: 4s imageElementRotate infinite;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+    .aboutMeContainer {
+        /* grid-template-columns: 1fr; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutMeContent,
+    .aboutMeContent span {
+        width: 100%;
+    }
+
+    .aboutMeContain2 {
+        order: 4;
+    }
+
+    .imgRowTwo {
+        order: 3;
+    }
+
+    .Melting-Emoji,
+    .meetMeElement,
+    .Mashroom {
+        display: none;
+    }
+}
+
+
+/* My Process */
+.myProcessSection {
+    align-items: flex-start;
+    position: relative;
+}
+
+.accordion.width {
+    /* border: 1px solid rgba(0, 0, 0, 0.125); */
+    display: flex;
+    flex-direction: row;
+}
+
+.accordion.width .card {
+    flex-direction: row;
+    flex-grow: 0;
+    flex-shrink: 1;
+    min-width: min-content;
+}
+
+.accordion.width .card .card-header {
+    cursor: pointer;
+    /* transform: rotate(180deg); */
+
+}
+
+.accordion.width .card .card-header:not(.collapsed) {
+    pointer-events: none;
+}
+
+.collapsing.width {
+    transition: width 0.35s ease;
+    height: auto;
+    width: 0;
+}
+
+.collapsing.height {
+    transition: height 0.35s ease;
+    width: auto;
+    height: 0;
+}
+
+
+
+@media (max-width: 640px) {
+    .accordion.width {
+        flex-direction: column;
+    }
+
+    .accordion.width .card {
+        flex-direction: column;
+    }
+
+    .accordion.width .card .card-header {
+        transform: none;
+        writing-mode: horizontal-tb;
+    }
+
+    .collapsing {
+        transition: height 0.35s ease;
+        width: auto;
+        height: 0;
+    }
+}
+
+.collapse.show {
+    display: block;
+}
+
+@media (max-width: 640px) {
+    .collapsing {
+        display: block;
+        height: auto;
+    }
+}
+
+.myProcessContentAndHeadingContainer {
+    border: none;
+}
+
+.myProcessContainer {
+    /* height: 90vh !important; */
+}
+
+.myProcessSubHeadContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    background: none;
+    color: var(--prime-text-color);
+}
+
+.myProcessSubHeadContainer:not(.collapsed) .myProcessSubHead {
+    /* visibility: hidden; */
+    opacity: 0;
+}
+
+.myProcessSubHeadCounter {
+    font-size: var(--fs-48);
+}
+
+.myProcessSubHead {
+    font-size: var(--fs-48);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+[data-myprocess="one"] {
+    background-color: var(--myprocess-card-1);
+}
+
+[data-myprocess="two"] {
+    background-color: var(--myprocess-card-2);
+}
+
+[data-myprocess="three"] {
+    background-color: var(--myprocess-card-3);
+}
+
+[data-myprocess="four"] {
+    background-color: var(--myprocess-card-4);
+}
+
+.myProcessContentContainer {
+    padding: var(--fs-36);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    gap: var(--fs-32);
+}
+
+.cardBodyHeading {
+    font-size: var(--fs-96);
+    width: 100%;
+    color: var(--prime-text-color);
+}
+
+.cardBodyContent,
+.cardBodyContent strong,
+.cardBodyContent b {
+    width: 100%;
+    font-size: var(--fs-36);
+    font-family: var(--secondary-font);
+    color: var(--green-pink);
+}
+
+.myProcessCardImage {
+    width: 70%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    border-radius: var(--image-corner-radius);
+}
+
+.skullElement {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10%;
+    animation: imageElementRotate 4s infinite;
+}
+
+
+@media (max-width: 640px) {
+    .myProcessSubHead {
+        transform: rotate(0);
+        writing-mode: horizontal-tb;
+    }
+
+    .myProcessSubHeadContainer:not(.collapsed) .myProcessSubHead {
+        /* visibility: hidden; */
+        opacity: 1;
+    }
+
+    .cardBodyHeading {
+        display: none;
+    }
+
+    .myProcessCardImage {
+        width: 100%;
+    }
+
+    .skullElement {
+        display: none;
+    }
+}
