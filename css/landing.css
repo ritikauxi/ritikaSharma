@@ -255,7 +255,7 @@
 .aboutMeContent span {
     font-family: var(--secondary-font);
     font-size: var(--fs-24);
-    width: 80%;
+    width: 95%;
     align-self: flex-end;
     margin-top: 16%;
     color: var(--prime-text-color);
@@ -282,7 +282,7 @@
 
 .Melting-Emoji {
     position: absolute;
-    bottom: -20%;
+    bottom: -70%;
     right: 10%;
     width: 20%;
 }
