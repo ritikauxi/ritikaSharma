@@ -1,14 +1,30 @@
-var dwidth = window.innerWidth;
+var dwidth = jQuery(window).width();
+jQuery(window).bind("resize", function (e) {
+    var wwidth = jQuery(window).width();
+    dwidth !== wwidth &&
+        ((dwidth = jQuery(window).width()),
+            window.RT && clearTimeout(window.RT),
+            (window.RT = setTimeout(function () {
+                this.location.reload(!1);
+            }, 1e3)));
+});
 
 window.addEventListener('resize', pageRefresh);
 
-function pageRefresh(e) {
-    // var wwidth = window.innerWidth;
+function pageRefresh(scrollToTop) {
     if (window.RT) clearTimeout(window.RT);
     window.RT = setTimeout(function () {
-        location.reload(false); // false to get page from cache
-    }, 1000);
+        if (scrollToTop) {
+            window.scrollTo(0, 0); // Scroll to top
+            location.reload(false); // Reload page from cache
+        } else {
+            // Store the current scroll position
+            const scrollPos = window.scrollY;
+            sessionStorage.setItem('scrollPos', scrollPos);
 
+            location.reload(false); // Reload page from cache
+        }
+    }, 1000);
 }
 
 var body = document.body;
