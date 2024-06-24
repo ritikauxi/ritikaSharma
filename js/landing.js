@@ -102,6 +102,7 @@ gsap.to(text.chars, {
 
 var colorchandingtext = $('[data-colorchandingtext="text"]');
 const splitCharType = new SplitType(colorchandingtext, { types: 'words, chars', tagName: 'span' });
+
 const tl = gsap.timeline({
     scrollTrigger: {
         trigger: "#basicAboutSection",
@@ -113,7 +114,7 @@ const tl = gsap.timeline({
     }
 })
     .set(splitCharType.chars, {
-        color: secondaryTextColor,
+        color: primeTextColor,
         stagger: 0.1,
         // ease: "power4.inOut"
     }, 0.5);

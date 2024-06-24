@@ -17,8 +17,7 @@
     z-index: 1;
 }
 
-.headignText
- {
+.headignText {
     font-size: var(--fs-164);
     font-weight: var(--head-fontWeight);
     text-transform: var(--head-text-transform);
@@ -27,11 +26,13 @@
     width: 100%;
     /* width: max-content; */
 }
-.headignText .word{
+
+.headignText .word {
     display: flex !important;
     overflow-y: hidden;
 }
-.heading2 .word{
+
+.heading2 .word {
     justify-content: flex-end
 }
 
@@ -88,7 +89,7 @@
     }
 
     .sectionGap {
-        height: 60px;
+        /* height: 60px; */
     }
 
     .stickyEye {
@@ -114,7 +115,7 @@
     font-size: var(--fs-64);
     text-align: center;
     font-weight: 400;
-    color: var(--prime-text-color);
+    color: var(--secondary-text-color);
     transition: color .2s ease;
 }
 
@@ -254,7 +255,7 @@
 .aboutMeContent,
 .aboutMeContent span {
     font-family: var(--secondary-font);
-    font-size: var(--fs-24);
+    font-size: var(--fs-36);
     width: 95%;
     align-self: flex-end;
     margin-top: 16%;
@@ -271,6 +272,7 @@
     width: 100%;
     aspect-ratio: 74/93;
     border-radius: var(--image-corner-radius);
+    object-fit: cover;
 }
 
 .meetMeElement {
@@ -510,5 +512,57 @@
 
     .skullElement {
         display: none;
+    }
+}
+
+
+/* Comming Sooon */
+.CommingSoon .headings {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.CommingSoon>.headings>span:nth-child(2) {
+    align-self: end;
+}
+
+.commingSoonContainer {
+    aspect-ratio: 5/3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #DBB7F4 2.2%, #E4C6FA 38.38%, #EEDBFF 69.19%, #F2E4FF 100%);
+    border-radius: var(--fs-32);
+
+}
+
+.commingSoonSection {
+    width: 60%;
+}
+
+.commingSoonHead {
+    font-size: var(--fs-96);
+    color: #FC06F8;
+    text-align: center;
+}
+
+.commingSoonDescription {
+    font-size: var(--fs-36);
+    text-align: center;
+    color: var(--prime-text-color);
+}
+
+@media (max-width: 640px) {
+    .commingSoonContainer {
+        aspect-ratio: 5/6;
+    }
+
+    .commingSoonSection {
+        width: 90%;
     }
 }
