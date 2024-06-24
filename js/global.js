@@ -12,6 +12,13 @@
 //     requestAnimationFrame(raf)
 // }
 
+
+// requestAnimationFrame(raf)
+// gsap.ticker.add((time) => {
+//     lenis.raf(time * 1000)
+// })
+// gsap.ticker.lagSmoothing(0)
+
 var eyeCircle = $('.eyeCircle');
 // console.log(eyeCircle.width());
 var eyeLocationX = $('.eyeButton').offset().left - $(window).scrollLeft() + $('.stickyEyeButton').width() / 2;
@@ -40,11 +47,6 @@ $(document).ready(function () {
 });
 
 
-requestAnimationFrame(raf)
-gsap.ticker.add((time) => {
-    lenis.raf(time * 1000)
-})
-gsap.ticker.lagSmoothing(0)
 
 
 // let intentObserver = ScrollTrigger.observe({
