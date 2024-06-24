@@ -1,15 +1,15 @@
-var dwidth = jQuery(window).width();
-jQuery(window).bind("resize", function (e) {
-    var wwidth = jQuery(window).width();
-    dwidth !== wwidth &&
-        ((dwidth = jQuery(window).width()),
-            window.RT && clearTimeout(window.RT),
-            (window.RT = setTimeout(function () {
-                this.location.reload(!1);
-            }, 1e3)));
-});
+var dwidth = window.innerWidth;
 
-// window.addEventListener('resize', pageRefresh);
+window.addEventListener("resize", function (e) {
+    var wwidth = window.innerWidth;
+    if (dwidth !== wwidth) {
+        dwidth = window.innerWidth;
+        if (window.RT) clearTimeout(window.RT);
+        window.RT = setTimeout(function () {
+            location.reload(false); // false to get the page from cache
+        }, 1000);
+    }
+});
 
 function pageRefresh(scrollToTop) {
     if (window.RT) clearTimeout(window.RT);
