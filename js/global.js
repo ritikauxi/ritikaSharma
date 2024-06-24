@@ -1,16 +1,16 @@
-const lenis = new Lenis({
-    duration: .7,
-    easing: (x) => (1 - Math.pow(1 - x, 3)),
-    // syncTouch: true,
-    // easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
-})
-// lenis.on('scroll', (e) => {
-//     console.log(e)
+// const lenis = new Lenis({
+//     duration: .7,
+//     easing: (x) => (1 - Math.pow(1 - x, 3)),
+//     // syncTouch: true,
+//     // easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
 // })
-function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-}
+// // lenis.on('scroll', (e) => {
+// //     console.log(e)
+// // })
+// function raf(time) {
+//     lenis.raf(time)
+//     requestAnimationFrame(raf)
+// }
 
 var eyeCircle = $('.eyeCircle');
 // console.log(eyeCircle.width());
