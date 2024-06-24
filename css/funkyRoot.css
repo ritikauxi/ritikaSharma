@@ -1,0 +1,21 @@
+:root {
+    --fs-250: clamp(4rem, 8.5vi + 2.3rem, 12.5rem);
+    --bg-color: linear-gradient(to bottom, #A267D1, #DECFE9);
+    --prime-text-color: #1C4AFD;
+    --prime-font: 'Bowens', 'Helvetica Neue', Arial, sans-serif;
+    --prime-font-change: 'Bowens', 'Helvetica Neue', Arial, sans-serif;
+    --secondary-text-color: #AE00E9;
+    --secondary-font: "Inter", sans-serif;
+    --green-white: #D7FFFE;
+    --white-white: #D7FFFE;
+    --footer-bg: linear-gradient(180deg, #2C59EF 0%, #9CAEE9 100%);
+    --text-transform: capitalize;
+    --head-text-transform: unset;
+    --head-fontWeight: 100;
+    --green-pink: #AE00E9;
+    --myprocess-card-1: #DBB7F4;
+    --myprocess-card-2: #E4C6FA;
+    --myprocess-card-3: #EEDBFF;
+    --myprocess-card-4: #F2E4FF;
+    --fontweight-bold-normal: 100;
+}

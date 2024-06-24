@@ -1,0 +1,464 @@
+.caseStudyWholeContainer {
+    align-items: flex-start;
+    background: var(--bg-color);
+}
+
+.caseStudyHeroSection {
+    height: 90vh;
+}
+
+.caseStudyHeroContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--fs-32);
+    height: 100%;
+}
+
+.heroHeading {
+    font-size: var(--fs-164);
+    color: var(--prime-text-color);
+}
+
+.heroParagraph {
+    font-family: var(--secondary-font);
+    font-size: var(--fs-36);
+    width: 80%;
+    color: var(--prime-text-color);
+
+}
+
+/* Title and Description */
+.caseStudyTitleDescription {
+    display: flex;
+    flex-direction: column;
+    gap: var(--work-grid-gap);
+}
+
+.caseStudyTitle {
+    font-size: var(--fs-164);
+    font-weight: 600;
+    color: var(--prime-text-color);
+}
+
+.caseStudyDescription {
+    font-size: var(--fs-36);
+    font-family: var(--secondary-font);
+    width: 70%;
+    color: var(--prime-text-color);
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+    .caseStudyTitleDescription {
+        gap: var(--fs-64);
+    }
+
+    .caseStudyDescription {
+        width: 100%;
+    }
+}
+
+
+/* Hero Video Section */
+.heroVideoSection {
+    position: relative;
+    overflow: visible;
+}
+
+.heroVideo {
+    width: 100%;
+    aspect-ratio: 16/8;
+    object-fit: cover;
+    border-radius: var(--image-corner-radius);
+}
+
+.liveSireButtonContainer {
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: -120px;
+    right: var(--fs-164);
+    background-color: var(--prime-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: var(--fs-64);
+    text-decoration: none;
+    transition: transform ease .2s;
+
+    div {
+        font-size: var(--fs-32);
+        color: var(--bg-color);
+        font-family: var(--secondary-font);
+    }
+}
+
+.liveSireButtonContainer:hover {
+    transform: scale(1.1);
+}
+
+/* Project OVerview */
+.headingContentContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.subHeading {
+    font-size: var(--fs-64);
+    width: 50%;
+    color: var(--prime-text-color);
+    padding-bottom: var(--fs-48);
+}
+
+.descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--work-grid-gap);
+    width: 100%;
+    padding-bottom: 50px;
+
+}
+
+.description,
+.description span,
+.description li {
+    font-size: var(--fs-48);
+    font-family: var(--secondary-font);
+    line-height: 1.3;
+    color: var(--prime-text-color);
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 1.5em;
+    /* Adjust this value as needed */
+    text-indent: -1.5em;
+    /* Match this value with padding-left */
+    margin-bottom: 10px;
+}
+
+ul li::marker {
+    position: absolute;
+    left: 0;
+}
+
+.description span {
+    color: var(--prime-text-color);
+    font-weight: 600;
+}
+
+.projectOverviewDetials {
+    display: flex;
+    flex-wrap: wrap;
+
+    h3 {
+        flex-basis: 50%;
+        padding: 0 0 50px 0;
+        box-sizing: border-box;
+        font-size: var(--fs-36);
+        font-family: var(--secondary-font);
+        font-weight: 600;
+        color: var(--prime-text-color);
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+    .headingContentContainer {
+        flex-direction: column;
+        gap: var(--fs-64);
+    }
+
+    .projectOverviewDetials {
+        flex-direction: column;
+        gap: 10px;
+
+        h3 {
+            padding: 0;
+        }
+    }
+
+    .description,
+    .description span {
+        font-size: var(--fs-32);
+    }
+
+    .liveSireButtonContainer {
+        top: -80px;
+        right: var(--site-margin);
+        padding: var(--fs-36);
+    }
+}
+
+
+/* Full width container */
+.fullWidthContainer {
+    width: 100%;
+    padding: var(--fs-64);
+
+}
+
+.videoFullWidthContainer {
+    width: 100%;
+    /* padding: var(--fs-64); */
+
+    .workImages {
+        border-radius: 0;
+    }
+}
+
+
+
+
+/* Design Process */
+
+.desginProcess {
+    display: flex;
+    gap: var(--work-grid-gap);
+    flex-direction: row;
+    padding-top: 450px;
+    align-items: flex-end;
+    position: relative;
+}
+
+.designProcessImageContainer {
+    width: 100%;
+}
+
+.designProcessImage {
+    width: 40%;
+    aspect-ratio: 711/971;
+    border-radius: 0px !important;
+    /* border-bottom-right-radius: 0px !important; */
+    object-fit: cover;
+}
+
+.DesignProcessContentContainer {
+    width: 100%;
+}
+
+.designProcessRandomImage {
+    width: 30%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+    .desginProcess {
+        flex-direction: column;
+        padding-top: var(--site-margin);
+
+    }
+
+    .designProcessRandomImage {
+        /* width: 40%; */
+        display: none;
+    }
+}
+
+
+/* Three Image Grid */
+.threeImageGrid {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    position: relative;
+    /* 5 rows, each 1fr */
+    grid-template-columns: repeat(3, 1fr);
+    /* 4 columns, each 1fr */
+    column-gap: var(--fs-32);
+
+    .gridImageOne {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+
+    .gridImageTwo {
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+    }
+
+    .gridImageThree {
+        grid-column: 3 / 4;
+        grid-row: 3 / 5;
+    }
+
+    .gridDescription {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+        padding: var(--fs-32);
+        padding-left: 0;
+        color: var(--prime-text-color);
+    }
+}
+
+.threeGridTopRandomImageContainer {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    img {
+        width: 100%;
+    }
+}
+
+.threeGridBottomRandomImageContainer {
+    width: 30%;
+    position: absolute;
+    left: 0;
+    bottom: 30%;
+
+    img {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+    .threeImageGrid {
+        display: grid;
+        /* grid-template-rows: repeat(5, 1fr); */
+        grid-template-rows: unset;
+        position: relative;
+        /* 5 rows, each 1fr */
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-columns: unset;
+        /* 4 columns, each 1fr */
+        column-gap: var(--fs-32);
+
+        .gridImageOne {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+
+        .gridImageTwo {
+            grid-column: 2 / 3;
+            grid-row: 2 / 4;
+        }
+
+        .gridImageThree {
+            grid-column: 3 / 4;
+            grid-row: 3 / 5;
+        }
+
+        .gridDescription {
+            grid-column: 1 / 4;
+            grid-row: 6 / 7;
+            padding: 0;
+            padding-left: 0;
+            color: var(--prime-text-color);
+        }
+    }
+
+    .threeGridTopRandomImageContainer {
+        position: initial;
+        width: 100%;
+        grid-column: 3 / 4;
+        grid-row: 1;
+    }
+
+    .threeGridBottomRandomImageContainer {
+        position: initial;
+        width: 100%;
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+    }
+
+}
+
+
+/* Work Images */
+
+
+.workImagesSection {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: var(--case-study-work-gap);
+    object-fit: cover;
+}
+
+.singleImageContainer {
+    width: 100%;
+}
+
+.doubleImageContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: var(--case-study-work-gap);
+}
+
+.oneThirdImageContainer {
+    width: calc(70%);
+    object-fit: cover;
+}
+
+.oneThirdTwoImages {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--case-study-work-gap);
+    align-items: center;
+}
+
+.twoOntThirdImages {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--case-study-work-gap);
+    align-items: center;
+}
+
+.workImages {
+    width: 100%;
+    border-radius: var(--image-corner-radius);
+    object-fit: cover;
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+    .doubleImageContainer {
+        flex-direction: column;
+    }
+
+    .oneThirdImageContainer {
+        width: 100%;
+    }
+
+    .twoOntThirdImages,
+    .oneThirdTwoImages {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fourContainterMobileOrder :nth-child(1) {}
+
+    .fourContainterMobileOrder :nth-child(2) {}
+
+    .fourContainterMobileOrder :nth-child(3) {
+        order: 4;
+    }
+
+    .fourContainterMobileOrder :nth-child(4) {
+        order: 3;
+    }
+}
+
+
+.nextCaseStudyLink {
+    text-align: center;
+    width: 100%;
+
+    p {
+        font-size: var(--fs-48);
+        color: var(--prime-text-color);
+        text-decoration: underline;
+    }
+
+    h4,
+    h4 a {
+        font-size: var(--fs-164);
+        color: var(--prime-text-color);
+    }
+}

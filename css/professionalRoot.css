@@ -1,0 +1,23 @@
+:root {
+    --fs-250: clamp(4rem, 11.63vi + 1.67rem, 15.63rem);
+    --bg-color: #fff5e3;
+    --prime-text-color: #004542;
+    --secondary-text-color: #D8E75F;
+    --black-color: #000000;
+    --secondary-font: "HelveticaNeue", sans-serif;
+    --green-white: #004542;
+    --white-white: #FFF5E3;
+    --prime-font: 'Thunder', 'Helvetica Neue', Arial, sans-serif;
+    --prime-font-change: "HelveticaNeue", sans-serif;
+    --footer-bg: #004542;
+    --text-transform: uppercase;
+    --head-text-transform: uppercase;
+    --head-fontWeight: 600;
+    --green-pink: #004542;
+    --myprocess-card-1: #FFEDCD;
+    --myprocess-card-2: #FFE0A9;
+    --myprocess-card-3: #FFD58C;
+    --myprocess-card-4: #FFC866;
+    --fontweight-bold-normal: 650;
+
+}
