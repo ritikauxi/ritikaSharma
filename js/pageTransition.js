@@ -9,7 +9,7 @@ jQuery(window).bind("resize", function (e) {
             }, 1e3)));
 });
 
-window.addEventListener('resize', pageRefresh);
+// window.addEventListener('resize', pageRefresh);
 
 function pageRefresh(scrollToTop) {
     if (window.RT) clearTimeout(window.RT);
