@@ -1,23 +1,23 @@
-// const lenis = new Lenis({
-//     duration: .7,
-//     easing: (x) => (1 - Math.pow(1 - x, 3)),
-//     // syncTouch: true,
-//     // easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+const lenis = new Lenis({
+    duration: .7,
+    easing: (x) => (1 - Math.pow(1 - x, 3)),
+    // syncTouch: true,
+    // easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+})
+// lenis.on('scroll', (e) => {
+//     console.log(e)
 // })
-// // lenis.on('scroll', (e) => {
-// //     console.log(e)
-// // })
-// function raf(time) {
-//     lenis.raf(time)
-//     requestAnimationFrame(raf)
-// }
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+}
 
 
-// requestAnimationFrame(raf)
-// gsap.ticker.add((time) => {
-//     lenis.raf(time * 1000)
-// })
-// gsap.ticker.lagSmoothing(0)
+requestAnimationFrame(raf)
+gsap.ticker.add((time) => {
+    lenis.raf(time * 1000)
+})
+gsap.ticker.lagSmoothing(0)
 
 var eyeCircle = $('.eyeCircle');
 // console.log(eyeCircle.width());
