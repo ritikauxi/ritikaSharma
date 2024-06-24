@@ -352,7 +352,7 @@ body {
     color: var(--white-white);
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 75%;
 }
 
 .footerContaint>span {

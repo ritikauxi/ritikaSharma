@@ -29,7 +29,7 @@
 
 .headignText .word {
     display: flex !important;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 .heading2 .word {

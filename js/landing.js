@@ -90,7 +90,7 @@ gsap.to(text.chars, {
     scrollTrigger: {
         trigger: '.headingContainer',
         start: "top top", // Adjust as needed
-        end: "bottom top", // Adjust as needed
+        end: "+=200%", // Adjust as needed
         scrub: true,
         // markers: true
     }

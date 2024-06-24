@@ -17,10 +17,12 @@ function pageRefresh(scrollToTop) {
         if (scrollToTop) {
             window.scrollTo(0, 0); // Scroll to top
             location.reload(false); // Reload page from cache
+            ScrollTrigger.refresh()
         } else {
             // Store the current scroll position
             const scrollPos = window.scrollY;
             sessionStorage.setItem('scrollPos', scrollPos);
+            ScrollTrigger.refresh()
 
             location.reload(false); // Reload page from cache
         }
