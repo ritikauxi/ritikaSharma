@@ -68,7 +68,7 @@ else {
         var tl = gsap.timeline({ repeat: -1, repeatDelay: .2 });
 
 
-        
+
         tl.to(eyeCircle, { duration: .8, y: 0, x: 10, delay: 1, ease: "power1.inOut" });
         tl.to(eyeCircle, { duration: .8, y: 0, x: -10, delay: 0, ease: "power1.inOut" });
         tl.to(eyeCircle, { duration: .4, y: 0, x: 0, delay: 0, ease: "power1.in" });
@@ -124,6 +124,7 @@ $(document).ready(function () {
     const horizontalAccordions = $(".accordion.width");
     const cardHeader = $('.card-header');
 
+
     function setAccordionStyles() {
         const isSmallScreen = window.innerWidth < 640;
         horizontalAccordions.each((index, element) => {
@@ -131,11 +132,23 @@ $(document).ready(function () {
             const collapse = accordion.find(".collapse");
             const bodies = collapse.find("> *");
 
+            const myProcessContentAndHeadingContainer = accordion.find(".myProcessContentAndHeadingContainer")
+            let maxHeight = 0;
+            myProcessContentAndHeadingContainer.each((index, elem) => {
+                const currentHeight = $(elem).height();
+                console.log(currentHeight);
+                if (currentHeight > maxHeight) {
+                    maxHeight = currentHeight;
+
+                }
+            });
             if (isSmallScreen) {
                 collapse.removeClass("width").addClass("height");
             } else {
                 collapse.removeClass("height").addClass("width");
+
                 accordion.height(accordion.height());
+                // accordion.height(maxHeight);
                 bodies.width(bodies.eq(0).width());
             }
 
@@ -144,6 +157,8 @@ $(document).ready(function () {
             });
         });
     }
+    // accordion.height(accordion.height());
+
 
     setAccordionStyles();
     $(window).resize(setAccordionStyles);

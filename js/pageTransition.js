@@ -11,20 +11,28 @@ window.addEventListener("resize", function (e) {
     }
 });
 
-function pageRefresh(scrollToTop) {
+function pageRefresh(scrollToTop, hardRefresh = false) {
     if (window.RT) clearTimeout(window.RT);
     window.RT = setTimeout(function () {
         if (scrollToTop) {
             window.scrollTo(0, 0); // Scroll to top
-            location.reload(false); // Reload page from cache
-            ScrollTrigger.refresh()
+            if (hardRefresh) {
+                location.reload(true); // Hard refresh
+            } else {
+                location.reload(false); // Reload page from cache
+            }
+            ScrollTrigger.refresh();
         } else {
             // Store the current scroll position
             const scrollPos = window.scrollY;
             sessionStorage.setItem('scrollPos', scrollPos);
-            ScrollTrigger.refresh()
+            ScrollTrigger.refresh();
 
-            location.reload(false); // Reload page from cache
+            if (hardRefresh) {
+                location.reload(true); // Hard refresh
+            } else {
+                location.reload(false); // Reload page from cache
+            }
         }
     }, 1000);
 }
@@ -124,7 +132,7 @@ var eyeButton = document.querySelectorAll('.stickyEyeButton');
 eyeButton.forEach(function (element) {
     element.addEventListener('click', function () {
         pageTransition();
-        pageRefresh();
+        pageRefresh(true, true);
     });
 })
 // eyeButton.addEventListener('click', function () {
