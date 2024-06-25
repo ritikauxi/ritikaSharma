@@ -133,6 +133,7 @@ eyeButton.forEach(function (element) {
     element.addEventListener('click', function () {
         pageTransition();
         pageRefresh(true, true);
+        pageRefresh(true, true);
     });
 })
 // eyeButton.addEventListener('click', function () {
