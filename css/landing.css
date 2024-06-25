@@ -307,7 +307,7 @@
 .Mashroom {
     position: absolute;
     bottom: -20%;
-    right: 10%;
+    left: 10%;
     width: 10%;
     animation: 4s imageElementRotate infinite;
 }
