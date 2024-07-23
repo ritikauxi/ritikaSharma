@@ -107,7 +107,7 @@ const tl = gsap.timeline({
     scrollTrigger: {
         trigger: "#basicAboutSection",
         start: "top 50%",
-        end: "bottom 0%",
+        end: "bottom 50%",
         // pin: true,%
         scrub: 1,
         // markers:true
@@ -136,7 +136,7 @@ $(document).ready(function () {
             let maxHeight = 0;
             myProcessContentAndHeadingContainer.each((index, elem) => {
                 const currentHeight = $(elem).height();
-                console.log(currentHeight);
+                // console.log(currentHeight);
                 if (currentHeight > maxHeight) {
                     maxHeight = currentHeight;
 

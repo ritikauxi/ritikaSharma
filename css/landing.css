@@ -272,7 +272,7 @@
     font-family: var(--secondary-font);
     font-size: var(--fs-36);
     width: 95%;
-    align-self: flex-end;
+    /* align-self: flex-end; */
     margin-top: 16%;
     color: var(--prime-text-color);
 }

@@ -44,96 +44,96 @@ rootCSS = document.getElementById('root-css');
 var funkyEyesContainer = document.querySelectorAll('[data-eye="funky"]');
 var professionalEyesContainer = document.querySelectorAll('[data-eye="professional"]');
 
-if (sessionStorage.getItem('page') === null) {
-    rootCSS.href = './css/professionalRoot.css';
-    sessionStorage.setItem('page', 'professional');
-    body.setAttribute('data-page', 'professional');
-    professionalDesign.classList.remove('hide');
-    funkyDesign.classList.add('hide');
+// if (sessionStorage.getItem('page') === null) {
+//     rootCSS.href = './css/professionalRoot.css';
+//     sessionStorage.setItem('page', 'professional');
+//     body.setAttribute('data-page', 'professional');
+//     professionalDesign.classList.remove('hide');
+//     funkyDesign.classList.add('hide');
 
-    // professionalEyesContainer.classList.remove('hide');
-    professionalEyesContainer.forEach(function (element) {
-        element.classList.remove('hide')
-    })
-    funkyEyesContainer.forEach(function (element) {
-        element.classList.add('hide');
-    });
+//     // professionalEyesContainer.classList.remove('hide');
+//     professionalEyesContainer.forEach(function (element) {
+//         element.classList.remove('hide')
+//     })
+//     funkyEyesContainer.forEach(function (element) {
+//         element.classList.add('hide');
+//     });
 
-    var professionalDesign = document.querySelector('.professionalDesign');
-    var funkyDesign = document.querySelector('.funkyDesign');
-    var parent = professionalDesign.parentNode;
+//     var professionalDesign = document.querySelector('.professionalDesign');
+//     var funkyDesign = document.querySelector('.funkyDesign');
+//     var parent = professionalDesign.parentNode;
 
-    // Remove funkyDesign
-    funkyDesign.parentNode.removeChild(funkyDesign);
+//     // Remove funkyDesign
+//     funkyDesign.parentNode.removeChild(funkyDesign);
 
-    // Insert funkyDesign after professionalDesign
-    parent.insertBefore(funkyDesign, professionalDesign.nextSibling);
-} else {
-    if (sessionStorage.getItem('page') === 'professional') {
-        rootCSS.href = './css/professionalRoot.css';
-        body.setAttribute('data-page', 'professional');
-        professionalDesign.classList.remove('hide');
-        funkyDesign.classList.add('hide');
+//     // Insert funkyDesign after professionalDesign
+//     parent.insertBefore(funkyDesign, professionalDesign.nextSibling);
+// } else {
+//     if (sessionStorage.getItem('page') === 'professional') {
+//         rootCSS.href = './css/professionalRoot.css';
+//         body.setAttribute('data-page', 'professional');
+//         professionalDesign.classList.remove('hide');
+//         funkyDesign.classList.add('hide');
 
-        // professionalEyesContainer.classList.remove('hide');
-        // funkyEyesContainer.classList.add('hide');
+//         // professionalEyesContainer.classList.remove('hide');
+//         // funkyEyesContainer.classList.add('hide');
 
-        professionalEyesContainer.forEach(function (element) {
-            element.classList.remove('hide')
-        })
-        funkyEyesContainer.forEach(function (element) {
-            element.classList.add('hide');
-        });
+//         professionalEyesContainer.forEach(function (element) {
+//             element.classList.remove('hide')
+//         })
+//         funkyEyesContainer.forEach(function (element) {
+//             element.classList.add('hide');
+//         });
 
-        // var professionalDesign = document.querySelector('.professionalDesign');
-        // var funkyDesign = document.querySelector('.funkyDesign');
+//         // var professionalDesign = document.querySelector('.professionalDesign');
+//         // var funkyDesign = document.querySelector('.funkyDesign');
 
-        professionalEyesContainer.forEach(function (element) {
-            element.classList.remove('hide')
-        })
-        funkyEyesContainer.forEach(function (element) {
-            element.classList.add('hide');
-        });
-        var parent = professionalDesign.parentNode;
+//         professionalEyesContainer.forEach(function (element) {
+//             element.classList.remove('hide')
+//         })
+//         funkyEyesContainer.forEach(function (element) {
+//             element.classList.add('hide');
+//         });
+//         var parent = professionalDesign.parentNode;
 
-        // Remove funkyDesign
-        funkyDesign.parentNode.removeChild(funkyDesign);
+//         // Remove funkyDesign
+//         funkyDesign.parentNode.removeChild(funkyDesign);
 
-        // Insert funkyDesign after professionalDesign
-        parent.insertBefore(funkyDesign, professionalDesign.nextSibling);
-    } else {
-        rootCSS.href = './css/funkyRoot.css';
-        body.setAttribute('data-page', 'funkyDesign');
-        professionalDesign.classList.add('hide');
-        funkyDesign.classList.remove('hide');
+//         // Insert funkyDesign after professionalDesign
+//         parent.insertBefore(funkyDesign, professionalDesign.nextSibling);
+//     } else {
+//         rootCSS.href = './css/funkyRoot.css';
+//         body.setAttribute('data-page', 'funkyDesign');
+//         professionalDesign.classList.add('hide');
+//         funkyDesign.classList.remove('hide');
 
-        professionalEyesContainer.forEach(function (element) {
-            element.classList.add('hide')
-        })
-        funkyEyesContainer.forEach(function (element) {
-            element.classList.remove('hide');
-        });
+//         professionalEyesContainer.forEach(function (element) {
+//             element.classList.add('hide')
+//         })
+//         funkyEyesContainer.forEach(function (element) {
+//             element.classList.remove('hide');
+//         });
 
-        // professionalEyesContainer.classList.add('hide');
-        // funkyEyesContainer.classList.remove('hide');
+//         // professionalEyesContainer.classList.add('hide');
+//         // funkyEyesContainer.classList.remove('hide');
 
-        var professionalDesign = document.querySelector('.professionalDesign');
-        var funkyDesign = document.querySelector('.funkyDesign');
-        var parent = funkyDesign.parentNode;
+//         var professionalDesign = document.querySelector('.professionalDesign');
+//         var funkyDesign = document.querySelector('.funkyDesign');
+//         var parent = funkyDesign.parentNode;
 
-        parent.removeChild(professionalDesign);
-        parent.insertBefore(professionalDesign, funkyDesign.nextSibling);
+//         parent.removeChild(professionalDesign);
+//         parent.insertBefore(professionalDesign, funkyDesign.nextSibling);
 
-    }
-}
+//     }
+// }
 
 var eyeButton = document.querySelectorAll('.stickyEyeButton');
 
 eyeButton.forEach(function (element) {
     element.addEventListener('click', function () {
-        pageTransition();
+        // pageTransition();
         pageRefresh(true, true);
-        pageRefresh(true, true);
+        // pageRefresh(true, true);
     });
 })
 // eyeButton.addEventListener('click', function () {
